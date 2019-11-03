@@ -1,11 +1,11 @@
-from flask import Flask
 from twilio.twiml.voice_response import VoiceResponse
+from flask import Flask, render_template
 import random
 
 app = Flask(__name__)
 
 def generate_horoscope():
-    welcome = "Welcome to your UB hacking horoscope. Here is what the stars have to say to you: "
+    welcome = "Welcome to your UB hacking horoscope, creted for you by Emily Ryer. Here is what the stars have to say to you: "
     prefix_list = ["Today is a great day to ", "It may not be the best time to ", "The stars think you are ready to ", "It is your time to ", "Ruin would befall you if you were to ", "There has never been a better time to "]
     action_list = ["not sleep for 24 hours. ", "embrace your caffeine addiction with twenty red bulls. ", "throw away all your code at midnight and start over. ", "start a meme contest in the slack channel. ", "make a Tim Hortons run. ", "take nothing seriously and goof off the whole time. ", "eat so much sugar that you see behind your eyeballs. ", "drop your laptop down the stairs.", "attempt to win every prize. ", "sleep under a table with no pillow. "]
     sponser_tie_in = "The best sponser for you to connect with tonight is "
@@ -39,9 +39,10 @@ def generate_horoscope():
 
     return retval
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route('/')
 def hello():
-    return "Hello"
+    return render_template('index.html')
+
 
 @app.route("/answer", methods=['GET', 'POST'])
 def answer_call():
