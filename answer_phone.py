@@ -57,20 +57,6 @@ def answer_call():
 
     return str(resp)
 
-@app.route("/answer_text", methods=['GET', 'POST'])
-def answer_call():
-    """Respond to incoming phone calls with a brief message."""
-    # Start our TwiML response
-    resp = VoiceResponse()
-
-    horoscope = generate_horoscope()
-
-    # Read a message aloud to the caller
-    resp.say(horoscope, voice='alice')
-
-    return render_template('horoscope.html', message = horoscope)
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
