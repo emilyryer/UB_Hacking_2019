@@ -25,8 +25,6 @@ def generate_horoscope():
     retval = retval + random.randint(1,99) + ", " random.randint(1,99) + ", " random.randint(1,99) + ", " random.randint(1,99) + ", and " random.randint(1,99) + ". "
     retval = retval + "Thank you, and goodbye."
 
-
-#    return random.randint(1,10)
     print(retval)
     return retval
 
