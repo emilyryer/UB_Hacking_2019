@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 def generate_horoscope():
     welcome = "Welcome to your UB hacking horoscope. Here is what the stars have to say to you: "
-    prefix_list = ["Today is a great day to ", "It may not be the best time to ", "The stars think you are ready to ", "It is your time to ", "Ruin would befall you if you were to ", "There has never been a better time to "]
+    prefix_list = ["Today is a great day to ", "It may not be the best time to ", "The stars think you are ready to ", "It is your time to ", "Ruin would befall you if you were to ", "There has never been a better time to ", "Get ready to ", "Whether or not you want to, you will most likely "]
     action_list = ["not sleep for 24 hours. ", "embrace your caffeine addiction with twenty red bulls. ", "throw away all your code at midnight and start over. ", "start a meme contest in the slack channel. ", "make a Tim Hortons run. ", "take nothing seriously and goof off the whole time. ", "eat so much sugar that you see behind your eyeballs. ", "drop your laptop down the stairs. ", "attempt to win every prize. ", "sleep under a table with no pillow. "]
     sponser_tie_in = "The best sponser for you to connect with tonight is "
     sponser_list = ["M and T Bank. ", "Centene Corporation. ", "A C V Auctions. ", "Wegmans. ", "I B M. ", "Verizon Media. ", "Moog. ", "Value Centric. ", "Facebook. ", "Twilio. ", "Stark and Wayne. ", "Synacor. "]
