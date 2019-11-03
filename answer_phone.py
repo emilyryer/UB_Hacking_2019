@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from twilio.twiml.voice_response import VoiceResponse
 import random
 
@@ -50,6 +50,9 @@ def answer_call():
 
     return str(resp)
 
+@app.route('/')
+def hello():
+    return render_template('index.html')
 
 
 if __name__ == "__main__":
