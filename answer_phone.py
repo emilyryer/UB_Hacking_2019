@@ -39,14 +39,20 @@ def generate_horoscope():
 
     return retval
 
+@app.route("/", methods=['GET', 'POST'])
+def hello():
+    return "Hello"
+
 @app.route("/answer", methods=['GET', 'POST'])
 def answer_call():
     """Respond to incoming phone calls with a brief message."""
     # Start our TwiML response
     resp = VoiceResponse()
 
+    horoscope = generate_horoscope()
+
     # Read a message aloud to the caller
-    resp.say(generate_horoscope(), voice='alice')
+    resp.say(horoscope, voice='alice')
 
     return str(resp)
 
